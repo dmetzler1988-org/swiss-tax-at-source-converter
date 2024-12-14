@@ -1,0 +1,43 @@
+## OS ##
+### macOS ###
+# General
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+
+# Icon must end with two \r
+**/Icon
+
+# Thumbnails
+**/._*
+
+### Windows ###
+# Windows thumbnail cache files
+**/Thumbs.db
+**/Thumbs.db:encryptable
+**/ehthumbs.db
+**/ehthumbs_vista.db
+
+# Dump file
+**/*.stackdump
+
+# Folder config file
+**/[Dd]esktop.ini
+
+## IDE ##
+**/.idea
+**/.vscode/*
+.editorconfig
+
+## GIT ##
+.git
+.github
+.gitignore
+
+## Docker ##
+# Core files
+**/.env
+.docker-sync
+
+## Custom (needs to be on bottom to overwrite existing rules) ##
+README.md
