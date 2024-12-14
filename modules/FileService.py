@@ -73,14 +73,13 @@ def create_json_file(filename, targetFolder, content):
     print(f"Data has been saved to '{outputPath}'.")
 
 def process_txt_files(targetFolder):
-    records = []
-
     # Check if the folder exist or exit
     check_folder_exist(targetFolder)
 
     # List all .txt files in the target folder
     for filename in os.listdir(targetFolder):
         if filename.endswith('.txt'):
+            records = []
             filePath = os.path.join(targetFolder, filename)
             print(f'Reading: {filePath}')
 
