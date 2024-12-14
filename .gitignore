@@ -34,6 +34,7 @@ ehthumbs_vista.db
 /.docker-sync
 
 ### Python ###
+__pycache__
 
 ## Custom (needs to be on bottom to overwrite existing rules) ##
 _tmp

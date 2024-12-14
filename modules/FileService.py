@@ -3,7 +3,7 @@ import os
 import sys
 import zipfile
 
-from modules import JsonModelService
+from modules import JsonModel
 
 def check_folder_exist(folder):
     # Check if the folder exist
@@ -74,7 +74,6 @@ def create_json_file(filename, targetFolder, content):
 
 def process_txt_files(targetFolder):
     records = []
-    jsonObject = []
 
     # Check if the folder exist or exit
     check_folder_exist(targetFolder)
@@ -95,12 +94,12 @@ def process_txt_files(targetFolder):
                         content = line.strip()  # Strip whitespace
 
                         match line[0:2]:
-                            case '00': records.append(JsonModelService.json_record_type_00(line))
-                            case '06': records.append(JsonModelService.json_record_type_06(line))
-                            case '11': records.append(JsonModelService.json_record_type_11(line))
-                            case '12': records.append(JsonModelService.json_record_type_12(line))
-                            case '13': records.append(JsonModelService.json_record_type_13(line))
-                            case '99': records.append(JsonModelService.json_record_type_99(line))
+                            case '00': records.append(JsonModel.json_record_type_00(line))
+                            case '06': records.append(JsonModel.json_record_type_06(line))
+                            case '11': records.append(JsonModel.json_record_type_11(line))
+                            case '12': records.append(JsonModel.json_record_type_12(line))
+                            case '13': records.append(JsonModel.json_record_type_13(line))
+                            case '99': records.append(JsonModel.json_record_type_99(line))
 
             # Save the records to a JSON file
             create_json_file(filename, targetFolder, records)
