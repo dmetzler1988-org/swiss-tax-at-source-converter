@@ -15,7 +15,7 @@ Little python script to convert the given tax at source from a txt file (inside 
 ```shell
 # Build and start
 docker build -q -t swiss-tax-at-source-converter:latest -f Dockerfile .
-docker run --env-file .env --name swiss-tax-at-source-converter -d swiss-tax-at-source-converter:latest
+docker run -v `pwd`/target:/app/target --name swiss-tax-at-source-converter -d swiss-tax-at-source-converter:latest
 
 # Remove
 docker container rm -f swiss-tax-at-source-converter
